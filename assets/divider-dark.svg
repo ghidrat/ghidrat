@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="12" viewBox="0 0 860 12">
+<style>
+  .sweep { animation: sweep 5s linear infinite; }
+  .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes sweep { from { transform: translateX(-860px); } to { transform: translateX(860px); } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+</style>
+<defs>
+  <linearGradient id="base" x1="0" x2="1">
+    <stop offset="0" stop-color="#2f81f7" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#a371f7" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#2f81f7" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hi" x1="0" x2="1">
+    <stop offset="0" stop-color="#2f81f7" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#a371f7"/>
+    <stop offset="1" stop-color="#2f81f7" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="band"><rect x="0" y="5" width="860" height="2" rx="1"/></clipPath>
+</defs>
+<rect x="0" y="5" width="860" height="2" rx="1" fill="url(#base)"/>
+<g clip-path="url(#band)"><rect class="sweep" x="0" y="5" width="344" height="2" fill="url(#hi)"/></g>
+<circle class="pulse" cx="430" cy="6" r="2.4" fill="#3fb950"/>
+</svg>
